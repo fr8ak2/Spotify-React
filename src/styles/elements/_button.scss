@@ -1,0 +1,12 @@
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+    -webkit-appearance: button;
+
+    &::-moz-focus-inner,
+    &::-moz-focus-inner {
+        padding: 0;
+        border-style: none;
+    }
+}

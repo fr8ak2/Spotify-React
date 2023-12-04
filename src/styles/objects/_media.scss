@@ -1,0 +1,23 @@
+// ==========================================================================
+// Generic / Media
+// ==========================================================================
+
+svg {
+    fill: currentColor;
+}
+
+.cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover {
+    opacity: 0;
+
+    &.--loaded {
+        opacity: 1;
+        transition: opacity 1.2s $ease;
+    }
+}

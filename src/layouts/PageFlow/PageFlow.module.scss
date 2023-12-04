@@ -1,0 +1,16 @@
+@import '../../styles/settings/config.eases';
+@import '../../styles/settings/config';
+@import '../../styles/tools/functions';
+
+.pageContent {
+    position: relative;
+    display: grid;
+    gap: rem(10px);
+    grid-template-areas: 'left-sidebar main-view';
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto;
+    padding: rem(10px);
+    width: 100vw;
+    height: 100vh;
+    min-height: (600px);
+}

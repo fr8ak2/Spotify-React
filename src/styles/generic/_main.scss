@@ -1,0 +1,46 @@
+:root {
+    @if $enable-smooth-scroll {
+        @media (prefers-reduced-motion: no-preference) {
+            scroll-behavior: smooth;
+        }
+    }
+
+    --white: #{$white};
+    --black: #{$black};
+    --d-blue: #{$d-blue};
+    --g-blue: #{$g-blue};
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    overscroll-behavior: none;
+}
+
+html {
+    @include tap-highlight-color;
+    @include text-size-adjust;
+}
+
+body {
+    position: relative;
+    font-family: $base-font-family;
+    font-weight: $light;
+    font-size: $base-font-size;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--white);
+    background: var(--black);
+    line-height: 1.5;
+    scrollbar-width: none;
+    @include font-smoothing;
+    @include text-rendering;
+}

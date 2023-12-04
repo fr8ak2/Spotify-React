@@ -1,0 +1,40 @@
+@import '../../styles/settings/config.eases';
+@import '../../styles/settings/config.colors';
+@import '../../styles/settings/config';
+@import '../../styles/tools/functions';
+
+.button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: inherit;
+    background: transparent;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    overflow: hidden;
+    transition:
+        color 0.6s,
+        background 0.6s,
+        border 0.6s;
+    cursor: pointer;
+}
+
+.nav {
+    width: rem(34px);
+    height: rem(34px);
+    background: rgba($g-blue, 80%);
+    border-radius: 50%;
+
+    &:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background: var(--white);
+        }
+    }
+}

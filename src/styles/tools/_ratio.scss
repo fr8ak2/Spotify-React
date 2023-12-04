@@ -1,0 +1,29 @@
+// A list of aspect ratios that get generated as modifier classes.
+
+$aspect-ratios: (
+    (
+        2: 1,
+    ),
+    x
+        (
+            4: 3,
+        ),
+    (
+        16: 9,
+    )
+);
+
+// Generate a series of ratio classes to be used
+@mixin ratio($consequent, $antecedent) {
+    @if (type-of($antecedent) != number) {
+        @error "`#{$antecedent}` needs to be a number.";
+    }
+
+    @if (type-of($consequent) != number) {
+        @error "`#{$consequent}` needs to be a number.";
+    }
+
+    &:before {
+        padding-bottom: ($consequent/$antecedent) * 100%;
+    }
+}

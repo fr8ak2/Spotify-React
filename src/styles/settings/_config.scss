@@ -1,0 +1,45 @@
+@use 'sass:math';
+
+// Path is relative to the stylesheets directory.
+$assets-path: '/app/themes/bobrov/assets/' !default;
+
+// Base
+$base-font-family: 'HeliosCondLightC', sans-serif;
+$base-font-size: 16px;
+
+// Family
+$font-default: 'HeliosCondLightC', sans-serif;
+$font-primary: 'HeliosCompressedC', sans-serif;
+$font-secondary: 'HeliosLightC', sans-serif;
+$font-ternary: 'HeliosCondC', sans-serif;
+$font-ternary-bold: 'HeliosCondC-Bold', sans-serif;
+
+// Headings
+$hero-title: 80px !default;
+$font-size-h1: 62px !default;
+$font-size-h2: 54px !default;
+$font-size-h3: 48px !default;
+$font-size-h4: 40px !default;
+$font-size-h5: 32px !default;
+$font-size-h6: 26px !default;
+
+// Weights
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+// Transitions
+$speed: 0.45s;
+$easing: $ease;
+
+// Spacing Units
+$unit: 1.5%;
+
+// Container
+$container-width: 100%;
+$margin: $unit;
+
+// Options
+$enable-smooth-scroll: true !default;

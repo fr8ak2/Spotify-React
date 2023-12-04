@@ -2,11 +2,7 @@
     "compilerOptions": {
         "baseUrl": "./",
         "target": "esnext",
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "esnext"
-        ],
+        "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
@@ -25,48 +21,20 @@
             }
         ],
         "paths": {
-            "@/*": [
-                "./src/*"
-            ],
-            "@api/*": [
-                "src/api/*"
-            ],
-            "@components/*": [
-                "src/components/*"
-            ],
-            "@context/*": [
-                "src/context/*"
-            ],
-            "@shared/*": [
-                "src/shared/*"
-            ],
-            "@hooks/*": [
-                "src/hooks/*"
-            ],
-            "@layout/*": [
-                "src/layout/*"
-            ],
-            "@styles/*": [
-                "src/styles/*"
-            ],
-            "@public/*": [
-                "public/*"
-            ],
-            "@pages/*": [
-                "pages/*"
-            ],
-            "@utils/*": [
-                "src/utils/*"
-            ]
+            "@/*": ["./src/*"],
+            "@api/*": ["src/api/*"],
+            "@components/*": ["src/components/*"],
+            "@context/*": ["src/context/*"],
+            "@shared/*": ["src/shared/*"],
+            "@hooks/*": ["src/hooks/*"],
+            "@layouts/*": ["src/layouts/*"],
+            "@styles/*": ["src/styles/*"],
+            "@public/*": ["public/*"],
+            "@pages/*": ["pages/*"],
+			"@lib/*": ["src/lib/*"],
+            "@utils/*": ["src/utils/*"]
         }
     },
-    "include": [
-        "next-env.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
-        ".next/types/**/*.ts"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "exclude": ["node_modules"]
 }

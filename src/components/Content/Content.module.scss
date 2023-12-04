@@ -1,0 +1,15 @@
+@import '../../styles/settings/config.eases';
+@import '../../styles/settings/config';
+@import '../../styles/tools/functions';
+
+.section {
+    grid-area: main-view;
+}
+
+.main {
+    padding: rem(120px) 0 rem(28px);
+}
+
+.inner {
+    padding: 0 rem(28px);
+}

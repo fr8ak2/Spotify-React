@@ -1,0 +1,9 @@
+@import '../styles/settings/config.eases';
+@import '../styles/settings/config';
+@import '../styles/tools/functions';
+
+.page {
+    position: relative;
+    min-width: rem(320px);
+    overflow: hidden;
+}

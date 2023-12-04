@@ -1,26 +1,26 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
-	reactStrictMode: true,
-	swcMinify: true,
-	output: "standalone",
-	sassOptions: {
-		includePaths: [path.join(path.dirname(fileURLToPath(import.meta.url)), "styles")],
-	},
-	images: {
-		formats: ["image/avif", "image/webp"],
-	},
-	webpack(config) {
-		config.module.rules.push({
-			test: /\.svg$/i,
-			issuer: /\.[jt]sx?$/,
-			use: ["@svgr/webpack"],
-		});
+    reactStrictMode: true,
+    swcMinify: true,
+	output: 'standalone',
+    sassOptions: {
+        includePaths: [path.join(path.dirname(fileURLToPath(import.meta.url)), 'styles')],
+    },
+    images: {
+        formats: ['image/avif', 'image/webp'],
+    },
+    webpack(config) {
+        config.module.rules.push({
+            test: /\.svg$/i,
+            issuer: /\.[jt]sx?$/,
+            use: ['@svgr/webpack'],
+        });
 
-		return config;
-	}
+        return config;
+    },
 };
 
 export default nextConfig;
