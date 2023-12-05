@@ -19,7 +19,7 @@ export const getData = async (url: string) => {
     const resp = await fetch(url, {
         headers: {
             'Content-Type': 'application/json',
-            Authorization: access_token ? `Bearer ${access_token}` : 'No Auth',
+            'Authorization': access_token ? `Bearer ${access_token}` : 'No Auth',
         },
     });
 

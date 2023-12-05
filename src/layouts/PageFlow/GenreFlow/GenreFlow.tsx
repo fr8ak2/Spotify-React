@@ -6,13 +6,10 @@ import { Tag } from '@shared/Tag/Tag';
 import { FC, useCallback, useEffect, useState } from 'react';
 
 interface GenreProps {
-	params : {
-		slug?: string;
-	}
+	slug: string;
 }
 
-export const GenreFlow: FC<GenreProps> = ({ params }) => {
-	const slug = params.slug;
+export const GenreFlow: FC<GenreProps> = ({ slug }) => {
 	const [genreItems, setGenreItems] = useState<SearchResults | null>(null);
 
 	const genreList = useCallback(async () => {
@@ -23,7 +20,7 @@ export const GenreFlow: FC<GenreProps> = ({ params }) => {
 	}, [slug]);
 
 	useEffect(() => {
-		genreList().catch(e => console.log(e));
+		genreList().catch(e => console.error(e));
 	}, [genreList]);
 
     return (
