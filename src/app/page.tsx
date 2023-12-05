@@ -1,9 +1,13 @@
-import { NextPage } from 'next';
+'use client';
 
-//import styles from './Page.module.scss';
+import { LandingFlow } from '@layouts/PageFlow/LandingFlow/LandingFlow';
 
-const Home: NextPage = () => {
-    return <></>;
+const Home = () => {
+    return (
+        <>
+            <LandingFlow />
+        </>
+    );
 };
 
 export default Home;

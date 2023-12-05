@@ -1,4 +1,4 @@
-export const getGreeting = () => {
+export const DayTimes = () => {
     const currentHour = new Date().getHours();
 
     if (currentHour >= 0 && currentHour < 12) {
@@ -11,3 +11,8 @@ export const getGreeting = () => {
 
     return 'Evening';
 };
+
+export const ISO = (seconds: number) => {
+	return new Date(seconds).toISOString().substring(15, 15 + 4);
+};
+

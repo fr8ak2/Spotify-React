@@ -2,12 +2,6 @@ a {
     color: inherit;
     text-decoration: none;
     transition: all $speed $easing;
-
-    @media (hover: hover) and (pointer: fine) {
-        @include u-hocus {
-            color: var(--d-blue);
-        }
-    }
 }
 
 b,

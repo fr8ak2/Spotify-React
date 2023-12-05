@@ -21,18 +21,18 @@ export default function Header() {
 
     return (
         <header className={styles.header}>
-            <div className="">
-                <div className={styles.headerNav}>
-                    <Button className={styles.headerNavButton} onClick={onClick} type="button">
+            <div className={styles.inner}>
+                <div className={styles.nav}>
+                    <Button className={styles.navButton} onClick={onClick} type="button">
                         <Icon id="arrow-left" />
                     </Button>
 
-                    <Button className={styles.headerNavButton} onClick={() => router.forward()} type="button">
+                    <Button className={styles.navButton} onClick={() => router.forward()} type="button">
                         <Icon id="arrow-right" />
                     </Button>
                 </div>
 
-                <Form className={styles.headerForm} />
+                <Form className={styles.headerForm} search />
             </div>
         </header>
     );

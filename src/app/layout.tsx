@@ -4,6 +4,7 @@ import { LayoutDefault } from '@layouts/LayoutDefault';
 import { SvgSprite } from '@layouts/SvgSprite/SvgSprite';
 import { Box } from '@shared/Box/Box';
 import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
 import { ReactNode } from 'react';
 
 import styles from './Layout.module.scss';
@@ -26,9 +27,15 @@ export const metadata: Metadata = {
     },
 };
 
+const Mont = Montserrat({
+    subsets: ['latin'],
+    variable: '--font-primary',
+    display: 'swap',
+});
+
 const RootLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <html lang="en">
+        <html lang="en" className={Mont.variable}>
             <body>
                 <SvgSprite />
                 <Box className={styles.page}>

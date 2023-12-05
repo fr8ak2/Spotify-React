@@ -1,25 +1,27 @@
 import { Button } from '@shared/Button/Button';
 import { Icon } from '@shared/Icon/Icon';
 import { clsx } from 'clsx';
-import { FC } from 'react';
+import { ChangeEvent, FC } from 'react';
 
 import styles from './SearchInput.module.scss';
 
 interface SearchInputProps {
     className?: string;
     model?: string;
-    onChange?: () => void;
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
     onClick?: () => void;
 }
 
 export const SearchInput: FC<SearchInputProps> = ({ className, model, onChange, onClick }) => {
     return (
-        <div className={clsx(styles.searchInput, className)}>
-            <Icon id="search" />
+        <div className={clsx(styles.group, className)}>
+            <span className={styles.icon}>
+                <Icon id="search" />
+            </span>
 
             <input
                 type="text"
-                className={clsx(styles.SearchInputField)}
+                className={clsx(styles.input)}
                 placeholder="What you want to listen?"
                 value={model}
                 onChange={onChange}

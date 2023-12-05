@@ -1,0 +1,21 @@
+@import '../../../styles/settings/config.eases';
+@import '../../../styles/settings/config';
+@import '../../../styles/tools/functions';
+
+.heading {
+	margin: 0 0 rem(60px);
+
+	> h1 {
+		font-weight: $bold;
+	}
+}
+
+.releases,
+.featured {
+	display: flex;
+	flex-direction: column;
+}
+
+.featured {
+	margin: rem(100px) 0 0;
+}

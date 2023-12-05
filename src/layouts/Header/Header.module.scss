@@ -12,15 +12,23 @@
     width: 100%;
     height: rem(68px);
     padding: rems(16px 20px);
-    background: rgba($d-blue, 50%);
+    background: rgba($g-blue, 50%);
+	z-index: 21;
 }
 
-.headerNav {
+.inner {
+	display: flex;
+	align-items: center;
+	gap: 0 rem(26px);
+	flex: 1;
+}
+
+.nav {
     display: flex;
     gap: rem(10px);
 }
 
-.headerNavButton {
+.navButton {
     > span {
         display: block;
         width: rem(24px);

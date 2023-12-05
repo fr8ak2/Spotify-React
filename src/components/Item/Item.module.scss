@@ -1,0 +1,65 @@
+@import '../../styles/settings/config.eases';
+@import '../../styles/settings/config.colors';
+@import '../../styles/settings/config';
+@import '../../styles/tools/functions';
+
+.link {
+	position: relative;
+	width: 100%;
+	padding: rem(18px);
+	background: var(--m-blue);
+	isolation: isolate;
+	border-radius: rem(10px);
+
+	&:hover {
+		background: var(--g-blue);
+	}
+}
+
+.inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	height: 100%;
+}
+
+.img {
+	position: relative;
+	width: 100%;
+	height: rem(180px);
+	margin: 0 0 rem(16px);
+	box-shadow: 0 8px 24px rgba($black, 50%);
+	border-radius: rem(8px);
+	overflow: hidden;
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border-radius: rem(8px);
+
+	> svg {
+		display: block;
+		width: rem(52px);
+		height: rem(52px);
+	}
+}
+
+.content {
+	position: relative;
+	overflow: hidden;
+}
+
+.title {
+	margin: 0 0 rem(6px);
+}
+
+.text {
+	font-size: rem(14px);
+	color: var(--gray);
+}
+
+

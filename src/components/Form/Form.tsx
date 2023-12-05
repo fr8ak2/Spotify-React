@@ -1,9 +1,8 @@
-// import { useRouter } from 'next/router';
-// import { useSpotify } from '@context/SpotifyContext';
 import { SearchInput } from '@components/Form/components/SearchInput';
+import { useSpotify } from "@context/SpotifyContext";
 import { clsx } from 'clsx';
-import { usePathname } from 'next/navigation';
-import { FC, ReactNode } from 'react';
+import { usePathname,useRouter  } from 'next/navigation';
+import { FC, FormEvent, ReactNode } from 'react';
 
 import styles from './Form.module.scss';
 
@@ -14,22 +13,21 @@ interface FormProps {
 }
 
 export const Form: FC<FormProps> = ({ className, search, children }) => {
-    // const router = useRouter();
+    const router = useRouter();
     const routerPath = usePathname();
 
-    // const { query, setQuery } = useSpotify();
-    //
-    // const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    //     e.preventDefault();
-    //     console.log(query);
-    //     void router.push(`/search/${query}`);
-    // };
-    //
+    const { query, setQuery } = useSpotify();
+
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        void router.push(`/search/${query}`);
+    };
+
     if (!routerPath?.includes('/search')) return null;
 
     return (
-        <form className={clsx(styles.form, className)} onSubmit={() => ''}>
-            {search && <SearchInput onChange={() => ''} onClick={() => ''} />}
+        <form className={clsx(styles.form, className)} onSubmit={handleSubmit}>
+            {search && <SearchInput onChange={(e) => setQuery(e.target.value)} onClick={() => setQuery('')} />}
             {children}
         </form>
     );

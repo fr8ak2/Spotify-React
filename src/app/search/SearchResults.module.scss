@@ -1,0 +1,77 @@
+@import '../../styles/settings/config.eases';
+@import '../../styles/settings/config';
+@import '../../styles/tools/functions';
+
+.songs {
+    position: relative;
+
+    .--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.songsInner {
+    display: flex;
+    flex-flow: column;
+    gap: rem(18px);
+    margin: rem(30px) 0 0;
+}
+
+.songsItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 rem(40px);
+}
+
+.songsInfo {
+    display: flex;
+    align-items: center;
+    gap: 0 rem(16px);
+    flex: 1;
+}
+
+.songsImg {
+    width: rem(60px);
+    height: rem(60px);
+}
+
+.songsDesc {
+    font-size: rem(14px);
+}
+
+.songsTitle {
+    font-weight: 700;
+    cursor: default;
+}
+
+.songsText {
+    color: var(--gray);
+
+    > span {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    a {
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.songsDuration {
+    font-size: rem(14px);
+    flex: 0 1 10%;
+    color: var(--gray);
+}
+
+.songsArtists,
+.songsAlbums,
+.songsPlaylists {
+    margin: rem(60px) 0 0;
+}

@@ -1,0 +1,10 @@
+@import '../../styles/settings/config.eases';
+@import '../../styles/settings/config';
+@import '../../styles/tools/functions';
+
+.itemGrid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-gap: rem(20px);
+	margin: rem(20px) 0 0;
+}

@@ -5,16 +5,16 @@ export interface AccessToken {
 }
 
 interface Image {
-    height: number | null;
+    height: number | undefined;
     url: string | null;
-    width: number | null;
+    width: number | undefined;
 }
 
 export interface Album {
     id: string;
     name: string;
     artists: [Artist];
-    images?: [Image];
+    images: [Image];
     album_type?: string;
     release_date?: string;
     tracks?: {
@@ -63,17 +63,30 @@ export interface PlaylistType {
     total?: number;
 }
 
+export interface Category {
+	id: string;
+	name: string;
+	icons?: [Image];
+	artists: [Artist];
+}
+
+export interface Categories {
+	categories?: {
+		items: Category[];
+	}
+}
+
 export interface SearchResults {
-    albums?: {
+    albums: {
         items: Album[];
     };
-    artists?: {
+    artists: {
         items: Artist[];
     };
-    playlists?: {
+    playlists: {
         items: PlaylistType[];
     };
-    tracks?: {
+    tracks: {
         items: Track[];
     };
 }
